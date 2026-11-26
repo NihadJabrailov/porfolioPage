@@ -1,94 +1,57 @@
 .about-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
-  gap: 32px;
-  align-items: start;
+  gap: 24px;
+  align-items: stretch;
 }
 
-.about-main {
+.about-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: 28px;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  justify-content: space-between;
+  gap: 28px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.about-card:hover {
+  border-color: var(--border-strong);
 }
 
 .about-bio {
-  font-size: 18px;
-  line-height: 1.7;
+  font-size: 16px;
+  line-height: 1.75;
   color: var(--text-secondary);
-  max-width: 62ch;
 }
 
-.about-meta-list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+.about-skills-block {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 20px;
   border-top: 1px solid var(--border);
-  border-left: 1px solid var(--border);
-  margin: 0;
 }
 
-.about-meta-item {
+.about-block-header {
   display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding: 20px;
-  background-color: var(--surface);
-  border-right: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  align-items: center;
+  gap: 8px;
 }
 
-.about-meta-item--full {
-  grid-column: 1 / -1;
+.about-block-icon {
+  color: var(--accent);
+  flex-shrink: 0;
 }
 
-.about-meta-label {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-}
-
-.about-meta-value {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  font-size: 15px;
-  font-weight: 500;
-  color: var(--text-primary);
-}
-
-.about-university {
+.about-block-title {
+  font-size: 14px;
   font-weight: 600;
   color: var(--text-primary);
-}
-
-.about-major {
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--text-secondary);
-}
-
-.about-meta-mono {
-  font-family: var(--font-mono);
-  font-size: 14px;
-}
-
-.about-skills-card {
-  padding: 24px;
-  background-color: var(--surface);
-  border: 1px solid var(--border);
-}
-
-.about-skills-heading {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 20px;
+  letter-spacing: -0.01em;
 }
 
 .skills-list {
@@ -97,41 +60,95 @@
   gap: 10px;
 }
 
-.skill-tag {
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 14px;
+  border-radius: 9999px;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
   font-family: var(--font-mono);
   font-size: 13px;
   font-weight: 500;
   color: var(--text-primary);
-  background-color: var(--bg-primary);
-  border: 1px solid var(--border);
-  padding: 8px 14px;
-  transition: border-color 0.2s ease, background-color 0.2s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
-.skill-tag:hover {
-  border-color: var(--border-strong);
-  background-color: var(--surface-hover);
+.skill-pill:hover {
+  background-color: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.about-education-card {
+  gap: 20px;
+}
+
+.education-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.education-university {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+  color: var(--text-primary);
+}
+
+.education-major {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+.education-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.education-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.education-meta-term {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.education-meta-desc {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
 }
 
 @media (max-width: 768px) {
   .about-grid {
     grid-template-columns: minmax(0, 1fr);
-    gap: 24px;
+    gap: 16px;
   }
 
-  .about-bio {
-    font-size: 16px;
-  }
-
-  .about-meta-list {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .about-meta-item {
-    padding: 16px;
-  }
-
-  .about-skills-card {
+  .about-card {
     padding: 20px;
+    gap: 20px;
+  }
+
+  .education-university {
+    font-size: 16px;
   }
 }
