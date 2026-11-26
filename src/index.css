@@ -1,21 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
 :root {
-  --bg-primary: #FAFAFA;
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F8FAFC;
   --surface: #FFFFFF;
-  --surface-hover: #F4F4F5;
-  --text-primary: #111827;
-  --text-secondary: #52525B;
-  --text-muted: #71717A;
-  --border: #E4E4E7;
-  --border-strong: #18181B;
-  --accent: #18181B;
+  --border: #E2E8F0;
+  --border-strong: #CBD5E1;
+  --shadow-soft: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
+
+  --accent: #2563EB;
+  --accent-hover: #1D4ED8;
+  --accent-soft: #EFF6FF;
   --accent-text: #FFFFFF;
+
+  --radius-md: 12px;
+  --radius-lg: 16px;
 
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 
-  --container-max: 1120px;
+  --container-max: 1140px;
   --nav-height: 68px;
 }
 
@@ -23,7 +31,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  box-shadow: none !important;
 }
 
 html {
@@ -41,7 +48,7 @@ body {
   color: var(--text-primary);
   font-family: var(--font-sans);
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.65;
   overflow-x: hidden;
 }
 
@@ -73,32 +80,54 @@ textarea {
 }
 
 .section {
-  padding-block: 80px;
+  padding-block: 88px;
+}
+
+.section-alt {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
 
 .section-header {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
   margin-bottom: 40px;
 }
 
-.section-index {
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  background-color: var(--accent-soft);
+  color: var(--accent);
   font-family: var(--font-mono);
   font-size: 12px;
   font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-muted);
 }
 
 .section-title {
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.025em;
   line-height: 1.2;
   color: var(--text-primary);
+}
+
+.section-subtitle {
+  font-size: 16px;
+  color: var(--text-secondary);
+  max-width: 620px;
+}
+
+.card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
 }
 
 .mono {
@@ -111,7 +140,7 @@ textarea {
   }
 
   .section {
-    padding-block: 56px;
+    padding-block: 60px;
   }
 
   .section-header {

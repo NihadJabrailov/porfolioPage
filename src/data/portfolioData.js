@@ -1,16 +1,17 @@
 export const profile = {
   fullName: 'Nihad Cəbrayılov',
+  role: 'Frontend Developer',
   birthDate: '14.05.2008',
-  education: 'Bakı Mühəndislik Universiteti — Mexatronika və Robototexnika Mühəndisliyi',
   university: 'Bakı Mühəndislik Universiteti',
   major: 'Mexatronika və Robototexnika Mühəndisliyi',
-  role: 'Frontend Developer & Mexatronika və Robototexnika Mühəndisliyi Tələbəsi',
+  education: 'Bakı Mühəndislik Universiteti — Mexatronika və Robototexnika Mühəndisliyi',
   email: 'cabrailofnihad@gmail.com',
   location: 'Bakı, Azərbaycan',
+  heroHeadline: 'Müasir, sürətli və istifadəçi yönümlü veb interfeyslər qururam.',
   heroSummary:
-    'Təmiz interfeys arxitekturası, yüksək performanslı veb tətbiqlər və mühəndislik yanaşması ilə müasir rəqəmsal məhsullar hazırlayıram.',
+    'Frontend Developer olaraq təmiz kod arxitekturası, responsiv dizayn və yüksək performanslı React tətbiqləri hazırlayıram.',
   aboutBio:
-    'Bakı Mühəndislik Universitetində Mexatronika və Robototexnika Mühəndisliyi ixtisası üzrə təhsil alıram. Mühəndislik təfəkkürünü müasir frontend texnologiyaları ilə birləşdirərək minimalist, sürətli və funksional veb interfeyslər qururam.',
+    'Frontend Development sahəsində müasir veb texnologiyaları ilə təmiz, əlçatan və sürətli interfeyslər hazırlayıram. Komponent əsaslı arxitektura, responsiv dizayn və istifadəçi təcrübəsinin optimallaşdırılması əsas fokus sahələrimdir.',
 };
 
 export const socialLinks = [
@@ -27,23 +28,16 @@ export const socialLinks = [
     handle: 'nihad-jabrayilov',
   },
   {
-    id: 'frontend-mentor',
-    label: 'Frontend Mentor',
-    url: 'https://www.frontendmentor.io/profile/NihadJabrailov',
-    handle: '@NihadJabrailov',
-  },
-  {
     id: 'instagram',
     label: 'Instagram',
     url: 'https://www.instagram.com/cabrailof/',
     handle: '@cabrailof',
   },
   {
-    id: 'tiktok',
-    label: 'TikTok',
-    url: 'https://www.tiktok.com/@placeholder',
-    handle: 'Tezliklə',
-    isPlaceholder: true,
+    id: 'frontend-mentor',
+    label: 'Frontend Mentor',
+    url: 'https://www.frontendmentor.io/profile/NihadJabrailov',
+    handle: '@NihadJabrailov',
   },
 ];
 
@@ -63,103 +57,109 @@ export const skills = [
   'React',
 ];
 
-export const projects = [
+export const githubConfig = {
+  username: 'NihadJabrailov',
+  starredEndpoint: 'https://api.github.com/users/NihadJabrailov/starred',
+  cacheKey: 'nihad_github_starred_cache_v1',
+  cacheTtlMs: 1000 * 60 * 15,
+};
+
+export const fallbackStarredProjects = [
   {
-    id: 'project-1',
-    index: '01',
-    title: 'Editorial Portfolio Sistemi',
-    description:
-      'Swiss/Editorial minimalist dizayn prinsipləri əsasında qurulmuş, yüksək oxunaqlı və sıfır kölgəli şəxsi portfolio arxitekturası.',
-    technologies: ['React', 'JavaScript', 'CSS'],
-    githubUrl: 'https://github.com/NihadJabrailov',
-    liveUrl: 'https://github.com/NihadJabrailov',
-  },
-  {
-    id: 'project-2',
-    index: '02',
-    title: 'Robototexnika Telemetriya Paneli',
-    description:
-      'Mexatronika sistemləri üçün sensor göstəricilərini və əsas əməliyyat statuslarını izləməyə yönəlmiş modul tipli veb interfeys nümunəsi.',
-    technologies: ['React', 'Tailwind CSS', 'JavaScript'],
-    githubUrl: 'https://github.com/NihadJabrailov',
-    liveUrl: 'https://github.com/NihadJabrailov',
+    id: 1,
+    name: 'porfolioPage',
+    description: 'Modern GitBook üslubunda hazırlanmış şəxsi Frontend Developer portfolio layihəsi.',
+    language: 'JavaScript',
+    stargazers_count: 1,
+    html_url: 'https://github.com/NihadJabrailov/porfolioPage',
+    homepage: 'https://nihadjabrayilov.vercel.app/',
   },
 ];
 
 export const certificates = [
   {
     id: 'cert-1',
-    index: '01',
     title: 'Frontend Web Development Fundamentals',
-    issuer: 'Nümunə Tədris Mərkəzi',
+    issuer: 'Tədris Proqramı',
     date: '2025',
     imageUrl: '',
     credentialUrl: 'https://github.com/NihadJabrailov',
     description:
-      'HTML, CSS, responsiv dizayn və müasir JavaScript əsasları üzrə təlim proqramı.',
+      'HTML, CSS, responsiv dizayn sistemləri və müasir JavaScript əsasları üzrə praktiki sertifikat.',
   },
   {
     id: 'cert-2',
-    index: '02',
-    title: 'Mexatronika və Robototexnika Giriş Sertifikatı',
-    issuer: 'Bakı Mühəndislik Universiteti',
+    title: 'React & Modern UI Architecture',
+    issuer: 'Frontend Sertifikatlaşdırma',
     date: '2026',
     imageUrl: '',
-    credentialUrl: 'https://github.com/NihadJabrailov',
+    credentialUrl: 'https://www.frontendmentor.io/profile/NihadJabrailov',
     description:
-      'Avtomatlaşdırma sistemləri, sensor inteqrasiyası və əsas mühəndislik prinsipləri üzrə akademik sertifikat.',
+      'Komponent əsaslı React tətbiqləri, state idarəetməsi və performans optimallaşdırılması.',
   },
 ];
 
 export const uiText = {
   hero: {
-    badge: 'PORTFOLIO // 2026',
+    scrollHint: 'Portfolioya keçid üçün aşağı sürüşdürün',
     ctaProjects: 'Layihələrə bax',
     ctaContact: 'Əlaqə saxla',
-    birthLabel: 'Təvəllüd',
-    educationLabel: 'Təhsil',
+    deviceScreenTitle: 'Frontend Developer Workspace',
+    deviceScreenSubtitle: 'React • JavaScript • Modern UI',
   },
   about: {
-    index: '01 / HAQQIMDA',
-    title: 'Profil və Texniki Baza',
-    educationHeading: 'Təhsil və İxtisas',
-    skillsHeading: 'Texnologiyalar',
-    birthLabel: 'Doğum tarixi',
+    kicker: 'Haqqımda',
+    title: 'Profil, Bacarıqlar və Təhsil',
+    subtitle: 'Texniki bacarıqlarım və akademik təhsil məlumatlarım.',
+    skillsHeading: 'Texniki Bacarıqlar',
+    educationHeading: 'Təhsil',
+    birthLabel: 'Təvəllüd',
     locationLabel: 'Məkan',
   },
   projects: {
-    index: '02 / LAYİHƏLƏR',
-    title: 'Public Layihələr',
+    kicker: 'Layihələr',
+    title: 'GitHub Ulduzlu Layihələr',
+    subtitle: 'GitHub üzərində ulduzladığım (starred) açıq mənbəli repozitoriyalar.',
+    loadingText: 'GitHub repozitoriyaları yüklənir...',
+    fallbackNotice: 'GitHub API sorğu limitinə görə keşlənmiş məlumat göstərilir.',
+    emptyText: 'Hazırda ulduzlu repozitoriya tapılmadı.',
+    noDescription: 'Bu repozitoriya üçün təsvir əlavə edilməyib.',
     githubLabel: 'GitHub',
     demoLabel: 'Live Demo',
+    starsLabel: 'Ulduz',
   },
   certificates: {
-    index: '03 / SERTİFİKATLAR',
+    kicker: 'Sertifikatlar',
     title: 'Sertifikatlar və Diplomlar',
-    viewButton: 'Bax',
+    subtitle: 'Əldə etdiyim sertifikatlar və peşəkar təlim sənədləri.',
+    viewButton: 'Sertifikata bax',
     issuerLabel: 'Verən qurum',
     dateLabel: 'Tarix',
-    credentialLinkLabel: 'Orijinal sənədə bax',
+    credentialLinkLabel: 'Sənədi aç',
     noImageText: 'Sertifikat şəkli tezliklə əlavə olunacaq.',
     closeLabel: 'Bağla',
   },
   contact: {
-    index: '04 / ƏLAQƏ',
-    title: 'Əlaqə və Sosial Şəbəkələr',
-    subtitle: 'Layihə təklifləri, əməkdaşlıq və ya suallar üçün birbaşa əlaqə saxlaya bilərsiniz.',
-    emailLabel: 'E-poçt ünvanı',
+    kicker: 'Əlaqə',
+    title: 'Birlikdə İşləyək',
+    subtitle: 'Layihə təklifləri, əməkdaşlıq və ya suallarınız üçün mənə birbaşa mesaj göndərə bilərsiniz.',
+    emailLabel: 'Birbaşa E-poçt',
     copyButton: 'Kopyala',
     copiedButton: 'Kopyalandı',
-    socialHeading: 'Sosial Şəbəkələr',
-    formHeading: 'Mesaj göndər',
+    formHeading: 'Mesaj Göndər',
     nameLabel: 'Adınız',
     namePlaceholder: 'Ad və soyadınız',
-    emailInputLabel: 'E-poçt',
+    emailInputLabel: 'E-poçt ünvanınız',
     emailPlaceholder: 'email@example.com',
-    messageLabel: 'Mesaj',
-    messagePlaceholder: 'Mesajınızı buraya yazın...',
-    submitButton: 'Mesajı göndər',
-    sentNotice: 'Mesajınız yerli olaraq qeydə alındı. Birbaşa cavab üçün e-poçt ünvanından istifadə edə bilərsiniz.',
-    footerCopy: '© 2026 Nihad Cəbrayılov. Bütün hüquqlar qorunur.',
+    messageLabel: 'Mesajınız',
+    messagePlaceholder: 'Layihə və ya sualınız barədə qısa məlumat yazın...',
+    submitButton: 'Mesajı Göndər',
+    sendingButton: 'Göndərilir...',
+    successMessage: 'Mesajınız uğurla qeydə alındı! Tezliklə sizinlə əlaqə saxlayacağam.',
+    errorMessage: 'Zəhmət olmasa bütün xanaları düzgün doldurun.',
+  },
+  footer: {
+    tagline: 'Təmiz interfeys və müasir frontend arxitekturası.',
+    copyright: '© 2026 Nihad Cəbrayılov. Bütün hüquqlar qorunur.',
   },
 };
