@@ -1,0 +1,114 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--nav-height);
+  gap: 24px;
+}
+
+.navbar-brand {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  white-space: nowrap;
+  padding-block: 4px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease;
+}
+
+.navbar-brand:hover {
+  border-bottom-color: var(--border-strong);
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.navbar-link:hover {
+  color: var(--text-primary);
+  background-color: var(--surface-hover);
+  border-color: var(--border);
+}
+
+.navbar-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: var(--surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.navbar-toggle:hover {
+  border-color: var(--border-strong);
+  background-color: var(--surface-hover);
+}
+
+.navbar-mobile-menu {
+  display: none;
+  background-color: var(--surface);
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: inline-flex;
+  }
+
+  .navbar-mobile-menu {
+    display: block;
+  }
+
+  .navbar-mobile-list {
+    display: flex;
+    flex-direction: column;
+    padding-block: 8px;
+  }
+
+  .navbar-mobile-link {
+    display: block;
+    padding: 12px 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border);
+    transition: color 0.15s ease, background-color 0.15s ease;
+  }
+
+  .navbar-mobile-list li:last-child .navbar-mobile-link {
+    border-bottom: none;
+  }
+
+  .navbar-mobile-link:hover {
+    color: var(--text-primary);
+  }
+}
